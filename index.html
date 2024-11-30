@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Video</title>
+    <title>Fullscreen Image</title>
     <style>
         body, html {
             margin: 0;
@@ -14,44 +14,23 @@
             background-color: black;
         }
 
-        #video, #image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        max-width: 100vw;
-        max-height: 100vh;
-        object-fit: contain;
-        object-position: center;
-}
-
-
         #image {
-            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: contain;
+            object-position: center;
         }
     </style>
 </head>
 <body>
 
-    <video id="video" autoplay muted>
-        <source src="loading_noel_start.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-
     <img id="image" src="loadingscreen_noel_suna.webp" alt="Loading Screen">
-
-    <script>
-        const video = document.getElementById('video');
-        const image = document.getElementById('image');
-
-        video.addEventListener('ended', () => {
-            video.style.display = 'none';
-            image.style.display = 'block';
-        });
-    </script>
-
 
 </body>
 </html>
